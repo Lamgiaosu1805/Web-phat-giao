@@ -42,9 +42,9 @@ const HomePage = () => {
             <div className='container pt-8 mx-auto relative z-10'>
                 <div className='w-full max-w-2xl p-6 mx-auto space-y-6'>
                     <Header />
-                    <AddTask />
+                    <AddTask setNewTaskList={setTaskBuffer}/>
                     <StatsAndFilters completedTasksCount={completeTaskCount} activeTasksCount={activeTaskCount} filter={filterType} setFilter={setFilterType}/>
-                    <TaskList filter={filterType} filterTasks={filterTask()}/>
+                    <TaskList filter={filterType} filterTasks={filterTask()} setNewTaskList={setTaskBuffer}/>
                     <div className='flex flex-col items-center justify-between gap-6 sm:flex-row'>
                         <TaskListPagination />
                         <DateTimeFilter />
