@@ -1,24 +1,17 @@
-# ----------------------------
-# Stage 1: Build
-# ----------------------------
-    FROM node:22-bullseye AS builder
+FROM node:22-bullseye
 
-    WORKDIR /app
-    
-    COPY package*.json ./
-    RUN npm ci
-    
-    COPY . .
-    RUN npm run build
-    
-    # ----------------------------
-    # Stage 2: Production image
-    # ----------------------------
-    FROM nginx:alpine
-    
-    RUN rm -rf /usr/share/nginx/html/*
-    
-    COPY --from=builder /app/dist /usr/share/nginx/html
-    
-    EXPOSE 80
-    CMD ["nginx", "-g", "daemon off;"]
+WORKDIR /app
+
+COPY package*.json ./
+RUN npm ci
+
+COPY . .
+
+# Build Vite
+RUN npm run build
+
+# Serve tĩnh trực tiếp bằng serve package
+RUN npm install -g serve
+
+EXPOSE 3000
+CMD ["serve", "-s", "dist", "-l", "3000"]
