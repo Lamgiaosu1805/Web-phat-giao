@@ -1,26 +1,23 @@
-import { useState } from 'react'
-import {Toaster} from 'sonner'
-import {BrowserRouter, Routes, Route} from 'react-router'
-import HomePage from './pages/HomePage'
-import NotFound from './pages/NotFound'
+import { BrowserRouter, Routes, Route } from "react-router-dom"
+import Navbar from "./components/Navbar"
+import Home from "./pages/Home"
+import Teacher from "./pages/Teacher"
+import Lecture from "./pages/Lecture"
+import Event from "./pages/Event"
+import NotFound from "./pages/NotFound"
 
 function App() {
-
   return (
-    <>
-      <BrowserRouter>
-        <Routes>
-          <Route
-            path='/'
-            element={<HomePage />}
-          />
-           <Route
-            path='*'
-            element={<NotFound />}
-          />
-        </Routes>
-      </BrowserRouter>
-    </>
+    <BrowserRouter>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/teacher" element={<Teacher />} />
+        <Route path="/lecture" element={<Lecture />} />
+        <Route path="/event" element={<Event />} />
+        <Route path="*" element={<NotFound />} />
+      </Routes>
+    </BrowserRouter>
   )
 }
 
