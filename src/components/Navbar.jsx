@@ -19,7 +19,7 @@ const Navbar = () => {
             <div className="px-4 mx-auto sm:px-6 lg:px-8 xl:px-[200px]">
                 <div className="flex items-center justify-between py-4 md:py-8">
                     {/* Logo */}
-                    <div className="font-inter font-medium text-[40px] leading-[48px] tracking-normal text-center text-bud-primary">
+                    <div className="font-inter font-medium text-[28px] md:text-4xl leading-[48px] tracking-normal text-center text-bud-primary">
                         BUDDHISM
                     </div>
 
