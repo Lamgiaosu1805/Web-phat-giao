@@ -1,9 +1,12 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 
 const Lecture = () => {
-  return (
-    <div>Lecture</div>
-  )
+    useEffect(() => {
+        document.title = "Lecture & scriptures";
+    }, []);
+    return (
+        <div>Lecture</div>
+    )
 }
 
 export default Lecture

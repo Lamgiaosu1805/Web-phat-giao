@@ -1,4 +1,9 @@
+import { useEffect } from "react";
+
 const Teacher = () => {
+    useEffect(() => {
+        document.title = "Teacher";
+    }, []);
     return (
       <div className="p-6">
         <h1 className="text-3xl font-bold text-bud-primary">Teacher Page</h1>

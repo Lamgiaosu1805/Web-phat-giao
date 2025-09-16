@@ -1,4 +1,9 @@
+import { useEffect } from "react";
+
 const Event = () => {
+    useEffect(() => {
+        document.title = "Event & retreat";
+      }, []);
     return (
       <div className="p-6">
         <h1 className="text-3xl font-bold text-bud-primary">Event & Retreat</h1>
