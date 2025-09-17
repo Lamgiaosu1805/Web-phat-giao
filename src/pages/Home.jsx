@@ -2,6 +2,12 @@ import { useEffect } from "react";
 import banner from "../assets/bg_image.png";
 import xoay from "../assets/xoay.png";
 import tuongPhat from "../assets/tuong-phat.png"
+import imgDemo from "../assets/img_demo.png"
+import TitleLine from "@/components/TitleLine";
+import { Badge } from "@/components/ui/badge";
+import { Card } from "@/components/ui/card";
+import { cn } from "@/lib/utils";
+import { Calendar, CalendarDaysIcon } from "lucide-react";
 
 const Home = () => {
     useEffect(() => {
@@ -34,7 +40,32 @@ const Home = () => {
                         Each mindful breath brings us back to the present moment, free from the worries of the past and the anxieties of the future. When we plant a seed of compassion and nurture a wholesome thought, it grows, spreads, and transforms suffering into joy. One who lives with compassion and learns to let go of attachments is one who has found the path of true freedom.<br />
                         Remember, happiness is not a distant destination, but the very moments we live with clarity and love. In every small action—a smile, a gentle word, a kind thought—we create nourishing energy for ourselves and the world around us. And it is in those moments that the path of happiness and liberation unfolds, here and now.</p>
                 </div>
-                <img src={tuongPhat} alt="tuong-phat" className="object-contain max-h-[320px] md:max-h-[800px] w-full"/>
+                <img src={tuongPhat} alt="tuong-phat" className="object-contain max-h-[320px] md:max-h-[800px] w-full" />
+            </div>
+            <div className="container flex-1">
+                <TitleLine title={"Upcoming Event"} />
+                <div className="flex-1 mt-4">
+                    <Card
+                        className="flex flex-row gap-4 p-4 transition-all duration-200 border-0 sm:flex-row bg-gradient-card shadow-custom-md hover:shadow-custom-lg animate-fade-in group"
+                    >
+                        <div className="w-full sm:w-48 aspect-[3/2] flex-1">
+                            <img
+                                src={imgDemo}
+                                alt="img-demo"
+                                className="object-cover w-full h-full rounded-lg"
+                            />
+                        </div>
+
+                        <div className="flex flex-col text-left flex-2">
+                            <h1 className="font-semibold text-md line-clamp-2">The first Buddha Dharma Day is celebrated on the 15th day of the 6th lunar month.</h1>
+                            <div className="flex flex-row items-center">
+                                <CalendarDaysIcon className='my-4 mr-2 size-6 text-muted-foreground' />
+                                <p className="text-base text-neutral-400">19:00 - 01/08/2025</p>
+                            </div>
+                        </div>
+                    </Card>
+                </div>
+
             </div>
         </div>
     );
