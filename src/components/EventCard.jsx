@@ -1,7 +1,7 @@
 import React from 'react'
 import { Card } from './ui/card'
 import { CalendarDaysIcon } from 'lucide-react'
-import imgDemo from "../assets/img_demo_2.png"
+import imgDemo from "../assets/img_demo_3.png"
 
 const EventCard = ({index}) => {
     return (

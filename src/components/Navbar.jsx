@@ -17,9 +17,9 @@ const Navbar = () => {
     return (
         <nav className="w-full bg-white shadow-md">
             <div className="px-4 mx-auto sm:px-6 lg:px-8 xl:px-[200px]">
-                <div className="flex items-center justify-between py-4 md:py-8">
+                <div className="flex items-center justify-between py-2 md:py-8">
                     {/* Logo */}
-                    <div className="font-inter font-medium text-[28px] md:text-4xl leading-[48px] tracking-normal text-center text-bud-primary">
+                    <div className="font-inter font-medium text-[20px] md:text-4xl leading-[48px] tracking-normal text-center text-bud-primary">
                         BUDDHISM
                     </div>
 
@@ -45,7 +45,7 @@ const Navbar = () => {
                             onClick={toggleMenu}
                             className="cursor-pointer text-bud-primary hover:text-bud-primary-500 focus:outline-none"
                         >
-                            {isOpen ? <X size={28} /> : <Menu size={28} />}
+                            {isOpen ? <X size={20} /> : <Menu size={20} />}
                         </button>
                     </div>
                 </div>
