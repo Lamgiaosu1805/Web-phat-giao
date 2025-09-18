@@ -40,8 +40,10 @@ const Home = () => {
             </div>
             <div className="container flex-1">
                 <TitleLine title={"Upcoming Event"} />
-                <div className="flex-1 mt-4">
-                    <EventCard />
+                <div className="grid flex-1 grid-cols-1 gap-3 mt-4 md:grid-cols-3 md:gap-8">
+                    {Array.from({ length: 6 }).map((_, index) => (
+                        <EventCard key={index} index={index}/>
+                    ))}
                 </div>
 
             </div>
