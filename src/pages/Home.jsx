@@ -2,12 +2,8 @@ import { useEffect } from "react";
 import banner from "../assets/bg_image.png";
 import xoay from "../assets/xoay.png";
 import tuongPhat from "../assets/tuong-phat.png"
-import imgDemo from "../assets/img_demo.png"
 import TitleLine from "@/components/TitleLine";
-import { Badge } from "@/components/ui/badge";
-import { Card } from "@/components/ui/card";
-import { cn } from "@/lib/utils";
-import { Calendar, CalendarDaysIcon } from "lucide-react";
+import EventCard from "@/components/EventCard";
 
 const Home = () => {
     useEffect(() => {
@@ -45,25 +41,7 @@ const Home = () => {
             <div className="container flex-1">
                 <TitleLine title={"Upcoming Event"} />
                 <div className="flex-1 mt-4">
-                    <Card
-                        className="flex flex-row gap-4 p-4 transition-all duration-200 border-0 sm:flex-row bg-gradient-card shadow-custom-md hover:shadow-custom-lg animate-fade-in group"
-                    >
-                        <div className="w-full sm:w-48 aspect-[3/2] flex-1">
-                            <img
-                                src={imgDemo}
-                                alt="img-demo"
-                                className="object-cover w-full h-full rounded-lg"
-                            />
-                        </div>
-
-                        <div className="flex flex-col text-left flex-2">
-                            <h1 className="font-semibold text-md line-clamp-2">The first Buddha Dharma Day is celebrated on the 15th day of the 6th lunar month.</h1>
-                            <div className="flex flex-row items-center">
-                                <CalendarDaysIcon className='my-4 mr-2 size-6 text-muted-foreground' />
-                                <p className="text-base text-neutral-400">19:00 - 01/08/2025</p>
-                            </div>
-                        </div>
-                    </Card>
+                    <EventCard />
                 </div>
 
             </div>
