@@ -9,10 +9,10 @@ import FooterBud from "./components/FooterBud"
 
 function App() {
   return (
-    <div className="flex flex-col min-h-screen"> {/* 👈 đảm bảo toàn màn hình */}
+    <div className="flex flex-col min-h-screen">
       <BrowserRouter>
         <Navbar />
-        <main className="flex-grow"> {/* 👈 phần content chiếm hết chiều cao còn lại */}
+        <main className="flex-grow">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/teacher" element={<Teacher />} />
@@ -21,7 +21,7 @@ function App() {
             <Route path="*" element={<NotFound />} />
           </Routes>
         </main>
-        <FooterBud /> {/* 👈 Footer sẽ dính đáy */}
+        <FooterBud />
       </BrowserRouter>
     </div>
   )
