@@ -19,6 +19,7 @@ module.exports = {
     extend: {
       colors: {
         budPrimary: "#C94810",
+        budSecondary: "#E3D5B2",
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",

@@ -5,6 +5,7 @@ import Teacher from "./pages/Teacher"
 import Lecture from "./pages/Lecture"
 import Event from "./pages/Event"
 import NotFound from "./pages/NotFound"
+import FooterBud from "./components/FooterBud"
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Route path="/event" element={<Event />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
+      <FooterBud />
     </BrowserRouter>
   )
 }
