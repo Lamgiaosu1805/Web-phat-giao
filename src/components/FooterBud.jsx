@@ -1,5 +1,8 @@
 import React from 'react'
-import đa from "../../public/mdi_twitter.png"
+import tweeter from "../assets/mdi_twitter.png"
+import telegram from "../assets/ri_instagram-fill.png"
+import facebook from "../assets/ic_baseline-facebook.png"
+import tiktok from "../assets/streamline-logos_tiktok-logo-block.png"
 
 const FooterBud = () => {
     return (
@@ -23,10 +26,10 @@ const FooterBud = () => {
                         <div className="flex flex-row xl:flex-col">
                             <h2 className='text-[14px] xl:text-[20px] xl:font-medium xl:py-3 text-white py-2'>Contact Us</h2>
                             <div className="flex flex-row">
-                                <img src="../../public/mdi_twitter.png" alt="mdi_twitter" className='w-8 h-8 ml-4 cursor-pointer xl:ml-0' />
-                                <img src="../../public/ri_instagram-fill.png" alt="ri_instagram" className='w-8 h-8 ml-4 cursor-pointer' />
-                                <img src="../../public/ic_baseline-facebook.png" alt="ic_baseline-facebook" className='w-8 h-8 ml-4 cursor-pointer' />
-                                <img src="../../public/streamline-logos_tiktok-logo-block.png" alt="streamline-logos_tiktok-logo-block" className='w-8 h-8 ml-4 cursor-pointer' />
+                                <img src={tweeter} alt="mdi_twitter" className='w-8 h-8 ml-4 cursor-pointer xl:ml-0' />
+                                <img src={telegram} alt="ri_instagram" className='w-8 h-8 ml-4 cursor-pointer' />
+                                <img src={facebook} alt="ic_baseline-facebook" className='w-8 h-8 ml-4 cursor-pointer' />
+                                <img src={tiktok} className='w-8 h-8 ml-4 cursor-pointer' />
                             </div>
                         </div>
                     </div>
